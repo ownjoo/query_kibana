@@ -1,8 +1,8 @@
 import logging
 from typing import Generator, Optional
 
-from ownjoo_utils.parsing.types import get_value
-from ownjoo_utils.logging.decorators import timed_generator
+from oj_toolkit.parsing.types import dig
+from oj_toolkit.logging.decorators import timed_generator
 from requests import Response, Session
 from urllib3 import Retry
 
@@ -21,7 +21,7 @@ def get_pit(url: str, index: str):
         },
     )
     r.raise_for_status()
-    return get_value(src=r.json(), path=['id'], exp=str)
+    return dig(src=r.json(), path='id', exp=str)
 
 
 @timed_generator(log_progress=False, log_level=logging.DEBUG, logger=logger)
@@ -50,9 +50,9 @@ def list_results(
     while last_sort:
         r: Response = S.get(url, params=params, json=json)
         r.raise_for_status()
-        hits: list = get_value(src=r.json(), path=['hits', 'hits'], exp=list, default=[])
+        hits: list = dig(src=r.json(), path='hits.hits', exp=list, default=[])
         yield from hits
-        if last_sort := get_value(src=hits, path=[-1, 'sort', 0], exp=str, default=None):
+        if last_sort := dig(src=hits, path='[-1].sort[0]', exp=str, default=None):
             json['search_after'] = [last_sort]
 
 

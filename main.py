@@ -4,8 +4,8 @@ import logging
 from sys import stderr
 from typing import Optional
 
-from ownjoo_utils.logging.consts import LOG_FORMAT
-from ownjoo_utils.parsing.consts import TimeFormats
+from oj_toolkit.logging.consts import LOG_FORMAT
+from oj_toolkit.parsing.consts import TimeFormats
 
 from query_kibana.main import main
 
