@@ -1,4 +1,4 @@
 funcy
 requests
 
-ownjoo_utils @ git+https://github.com/ownjoo-org/utils.git
+oj-toolkit>=0.2.2
