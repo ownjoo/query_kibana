@@ -1,4 +1,6 @@
 # template_cli
+
+[![License](https://img.shields.io/github/license/ownjoo/query_kibana)](LICENSE)
 test query API:
 
 # usage
