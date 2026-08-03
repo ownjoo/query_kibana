@@ -1,6 +1,7 @@
 # template_cli
 
 [![License](https://img.shields.io/github/license/ownjoo/query_kibana)](LICENSE)
+[![Top language](https://img.shields.io/github/languages/top/ownjoo/query_kibana)](https://github.com/ownjoo/query_kibana) [![Stars](https://img.shields.io/github/stars/ownjoo/query_kibana)](https://github.com/ownjoo/query_kibana/stargazers) [![Forks](https://img.shields.io/github/forks/ownjoo/query_kibana)](https://github.com/ownjoo/query_kibana/forks) [![Issues](https://img.shields.io/github/issues/ownjoo/query_kibana)](https://github.com/ownjoo/query_kibana/issues) [![Pull requests](https://img.shields.io/github/issues-pr/ownjoo/query_kibana)](https://github.com/ownjoo/query_kibana/pulls)
 test query API:
 
 # usage
